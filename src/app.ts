@@ -17,7 +17,7 @@ const port = process.env.PORT;
 
 
 
-app.use('/graphql', graphqlHTTP({schema, graphiql:false}));
+app.use('/graphql', graphqlHTTP({schema, graphiql:true}));
 connectToDatabase().
 then(() => {
     app.listen(port, ()=>console.log(`Server open on Port ${port}`));
